@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "safepass",
+  "version": "${version}",
+  "name": "SafePass",
+  "description": "Client-side mod that masks authentication passwords as you type them in chat (/login, /register, /reg, /l) so they are hidden from shoulder surfers, and optionally stores them in an AES-256-GCM encrypted local vault. Uses the server's existing /login command — no separate commands required.",
+  "icon": "image/icon.png",
+  "authors": ["fullsignalwifi"],
+  "environment": "client",
+  "entrypoints": { "client": ["dev.safepass.SafePassClient"] },
+  "mixins": ["safepass.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.18.3",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
